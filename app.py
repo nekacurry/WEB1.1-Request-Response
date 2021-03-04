@@ -14,13 +14,22 @@ def favorite_animal(users_animal):
     return f'Wow, {users_animal} is my favorite animal, too!'
 
 @app.route('/dessert/<users_dessert>')
-def favorite_adessert(users_dessert):
+def favorite_dessert(users_dessert):
     """Display a message to the user that changes based on their favorite animal."""
     return f'How did you know I liked {users_dessert}?'
 
 @app.route('/madlibs/<adjective>/<noun>')
 def madlibs(adjective, noun):
   return f'Every day I wake up and put on my {adjective} {noun}'
+
+@app.route('/multiply/<number1>/<number2>')
+def multiply(number1, number2):
+  
+  if number1.isdigit() and number2.isdigit():
+    m = int(number1) * int(number2)
+    return f'{number1} times {number2} is {m}'
+  else:
+    return "Invalid inputs. Please try again by entering 2 numbers!"
 
 
 if __name__ == '__main__':
