@@ -18,6 +18,9 @@ def favorite_adessert(users_dessert):
     """Display a message to the user that changes based on their favorite animal."""
     return f'How did you know I liked {users_dessert}?'
 
+@app.route('/madlibs/<adjective>/<noun>')
+def madlibs(adjective, noun):
+  return f'Every day I wake up and put on my {adjective} {noun}'
 
 
 if __name__ == '__main__':
