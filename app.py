@@ -31,6 +31,15 @@ def multiply(number1, number2):
   else:
     return "Invalid inputs. Please try again by entering 2 numbers!"
 
+@app.route('/sayntimes/<word>/<n>')
+def sayntimes(word, n):
+
+  repeat = ''
+
+  for i in range(int(n)):
+    repeat += word + ' '
+  return repeat
+
 
 if __name__ == '__main__':
     app.run(debug=True)
